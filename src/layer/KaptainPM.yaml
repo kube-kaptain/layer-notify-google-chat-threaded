@@ -1,0 +1,12 @@
+apiVersion: kaptain.org/1.39
+metadata:
+  description: "Google Chat threaded notify plugin for environment deploy images, added by a prePackagePrepare hook"
+
+spec:
+  main:
+    hooks:
+      prePackagePrepare: kaptain-out/notify-google-chat-threaded-contribute.bash
+
+layer-payload:
+  - source: /notify-google-chat-threaded-contribute.bash
+    destination: kaptain-out
